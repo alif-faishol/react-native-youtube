@@ -85,6 +85,8 @@
     }
     if ((UIWindow*)notification.object != self.window && _isFullscreen) {
         _isFullscreen = NO;
+        
+        [self.window toggleFullScreen:nil];
 
         _onChangeFullscreen(@{
             @"isFullscreen": @(_isFullscreen),
