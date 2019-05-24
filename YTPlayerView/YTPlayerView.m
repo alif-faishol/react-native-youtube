@@ -703,7 +703,7 @@ NSString static *const kYTPlayerSyndicationRegexPattern = @"^https://tpc.googles
   }
 
   // Remove the existing webView to reset any state
-  [self.webView removeFromSuperview];
+  [self.webView reload];
   _webView = [self createNewWebView];
   [self addSubview:self.webView];
 
